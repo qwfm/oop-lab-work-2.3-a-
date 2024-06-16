@@ -1,0 +1,136 @@
+\doxysection{Optimal\+BST Class Reference}
+\hypertarget{class_optimal_b_s_t}{}\label{class_optimal_b_s_t}\index{OptimalBST@{OptimalBST}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_optimal_b_s_t_a51eb7bdf19dfc3aae3f1d2bb88ceabb1}\label{class_optimal_b_s_t_a51eb7bdf19dfc3aae3f1d2bb88ceabb1} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Optimal\+BST} ()
+\begin{DoxyCompactList}\small\item\em Destructor to free dynamically allocated memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_optimal_b_s_t_a001901b998f21c5beb648a7eb00a7a5b}{parallel\+Compute\+Cost}} (int start, int end)
+\begin{DoxyCompactList}\small\item\em Method to compute optimal BST cost in a specified range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_rational}{Rational}} \mbox{\hyperlink{class_optimal_b_s_t_a2edf034d9cfed6dc0819e27a9546b94d}{compute\+Cost}} (int i, int j)
+\begin{DoxyCompactList}\small\item\em Helper method to compute cost and construct optimal BST for a given range. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_optimal_b_s_t_ae500d647576cd24751a0327357617d17}{construct\+Optimal\+BST}} (int num\+Threads)
+\begin{DoxyCompactList}\small\item\em Method to construct optimal BST using parallel threads. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_optimal_b_s_t_ab428b18a578b3eb68d7b1dbfed829f56}{get\+Root}} ()
+\begin{DoxyCompactList}\small\item\em Method to get the root node of the constructed optimal BST. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_optimal_b_s_t_aac4d0d53cffbdb41f2a6cce2d4438f61}{print\+Level\+Order}} (\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}root)
+\begin{DoxyCompactList}\small\item\em Method to print the nodes of the BST level by level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_optimal_b_s_t}{Optimal\+BST}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_optimal_b_s_t_a97f872408e2323b247d34ad78bff3f8b}{get\+Instance}} (\mbox{\hyperlink{class_rational}{Rational}} \texorpdfstring{$\ast$}{*}keys, \mbox{\hyperlink{class_rational}{Rational}} \texorpdfstring{$\ast$}{*}freq, int n)
+\begin{DoxyCompactList}\small\item\em Method to access the singleton instance of \doxylink{class_optimal_b_s_t}{Optimal\+BST}. \end{DoxyCompactList}\item 
+\Hypertarget{class_optimal_b_s_t_a9ef75fc440e2483ebc77ed1f4314b451}\label{class_optimal_b_s_t_a9ef75fc440e2483ebc77ed1f4314b451} 
+static void {\bfseries destroy\+Instance} ()
+\begin{DoxyCompactList}\small\item\em Method to destroy the singleton instance of \doxylink{class_optimal_b_s_t}{Optimal\+BST}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_optimal_b_s_t_a2edf034d9cfed6dc0819e27a9546b94d}\index{OptimalBST@{OptimalBST}!computeCost@{computeCost}}
+\index{computeCost@{computeCost}!OptimalBST@{OptimalBST}}
+\doxysubsubsection{\texorpdfstring{computeCost()}{computeCost()}}
+{\footnotesize\ttfamily \label{class_optimal_b_s_t_a2edf034d9cfed6dc0819e27a9546b94d} 
+\mbox{\hyperlink{class_rational}{Rational}} Optimal\+BST\+::compute\+Cost (\begin{DoxyParamCaption}\item[{int}]{i}{, }\item[{int}]{j}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Helper method to compute cost and construct optimal BST for a given range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Starting index of the range. \\
+\hline
+{\em j} & Ending index of the range. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Minimum cost of the optimal BST in the range \mbox{[}i, j\mbox{]}. 
+\end{DoxyReturn}
+\Hypertarget{class_optimal_b_s_t_ae500d647576cd24751a0327357617d17}\index{OptimalBST@{OptimalBST}!constructOptimalBST@{constructOptimalBST}}
+\index{constructOptimalBST@{constructOptimalBST}!OptimalBST@{OptimalBST}}
+\doxysubsubsection{\texorpdfstring{constructOptimalBST()}{constructOptimalBST()}}
+{\footnotesize\ttfamily \label{class_optimal_b_s_t_ae500d647576cd24751a0327357617d17} 
+void Optimal\+BST\+::construct\+Optimal\+BST (\begin{DoxyParamCaption}\item[{int}]{num\+Threads}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to construct optimal BST using parallel threads. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Threads} & Number of threads to use. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_optimal_b_s_t_a97f872408e2323b247d34ad78bff3f8b}\index{OptimalBST@{OptimalBST}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!OptimalBST@{OptimalBST}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \label{class_optimal_b_s_t_a97f872408e2323b247d34ad78bff3f8b} 
+static \mbox{\hyperlink{class_optimal_b_s_t}{Optimal\+BST}} \texorpdfstring{$\ast$}{*} Optimal\+BST\+::get\+Instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_rational}{Rational}} \texorpdfstring{$\ast$}{*}}]{keys}{, }\item[{\mbox{\hyperlink{class_rational}{Rational}} \texorpdfstring{$\ast$}{*}}]{freq}{, }\item[{int}]{n}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Method to access the singleton instance of \doxylink{class_optimal_b_s_t}{Optimal\+BST}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em keys} & Array of \doxylink{class_rational}{Rational} keys. \\
+\hline
+{\em freq} & Array of frequencies corresponding to keys. \\
+\hline
+{\em n} & Number of keys. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Singleton instance of \doxylink{class_optimal_b_s_t}{Optimal\+BST}. 
+\end{DoxyReturn}
+\Hypertarget{class_optimal_b_s_t_ab428b18a578b3eb68d7b1dbfed829f56}\index{OptimalBST@{OptimalBST}!getRoot@{getRoot}}
+\index{getRoot@{getRoot}!OptimalBST@{OptimalBST}}
+\doxysubsubsection{\texorpdfstring{getRoot()}{getRoot()}}
+{\footnotesize\ttfamily \label{class_optimal_b_s_t_ab428b18a578b3eb68d7b1dbfed829f56} 
+\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} Optimal\+BST\+::get\+Root (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to get the root node of the constructed optimal BST. 
+
+\begin{DoxyReturn}{Returns}
+Root node of the optimal BST. 
+\end{DoxyReturn}
+\Hypertarget{class_optimal_b_s_t_a001901b998f21c5beb648a7eb00a7a5b}\index{OptimalBST@{OptimalBST}!parallelComputeCost@{parallelComputeCost}}
+\index{parallelComputeCost@{parallelComputeCost}!OptimalBST@{OptimalBST}}
+\doxysubsubsection{\texorpdfstring{parallelComputeCost()}{parallelComputeCost()}}
+{\footnotesize\ttfamily \label{class_optimal_b_s_t_a001901b998f21c5beb648a7eb00a7a5b} 
+void Optimal\+BST\+::parallel\+Compute\+Cost (\begin{DoxyParamCaption}\item[{int}]{start}{, }\item[{int}]{end}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to compute optimal BST cost in a specified range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & Starting index of the range. \\
+\hline
+{\em end} & Ending index of the range. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_optimal_b_s_t_aac4d0d53cffbdb41f2a6cce2d4438f61}\index{OptimalBST@{OptimalBST}!printLevelOrder@{printLevelOrder}}
+\index{printLevelOrder@{printLevelOrder}!OptimalBST@{OptimalBST}}
+\doxysubsubsection{\texorpdfstring{printLevelOrder()}{printLevelOrder()}}
+{\footnotesize\ttfamily \label{class_optimal_b_s_t_aac4d0d53cffbdb41f2a6cce2d4438f61} 
+void Optimal\+BST\+::print\+Level\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{root}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to print the nodes of the BST level by level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Root node of the BST to print. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Optimal\+BST/Optimal\+BST.\+cpp\end{DoxyCompactItemize}

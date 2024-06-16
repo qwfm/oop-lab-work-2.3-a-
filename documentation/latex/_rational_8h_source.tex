@@ -1,0 +1,132 @@
+\doxysection{Rational.\+h}
+\hypertarget{_rational_8h_source}{}\label{_rational_8h_source}\index{OptimalBST/Rational.h@{OptimalBST/Rational.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_rational}{Rational}}\ \{}
+\DoxyCodeLine{00005\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordtype}{int}\ numerator;\ \ \ \ }
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{int}\ denominator;\ \ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{comment}{//\ Constructors}}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_rational}{Rational}}()\ :\ numerator(0),\ denominator(1)\ \{\}}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_rational}{Rational}}(\textcolor{keywordtype}{int}\ num)\ :\ numerator(num),\ denominator(1)\ \{\}}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_rational}{Rational}}(\textcolor{keywordtype}{int}\ num,\ \textcolor{keywordtype}{int}\ denom)\ :\ numerator(num),\ denominator(denom)\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ normalize();}
+\DoxyCodeLine{00015\ \ \ \ \ \}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ Define\ operator<<\ for\ output}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ operator<<(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_rational}{Rational}}\&\ r);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//\ Define\ operator>>\ for\ input}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{friend}\ std::istream\&\ operator>>(std::istream\&\ is,\ \mbox{\hyperlink{class_rational}{Rational}}\&\ r);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ Copy\ constructor}}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_rational}{Rational}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_rational}{Rational}}\&\ other)\ :\ numerator(other.numerator),\ denominator(other.denominator)\ \{\}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ Getter\ methods}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ getNumerator()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ numerator;\ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ getDenominator()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ denominator;\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ Arithmetic\ operations}}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_rational}{Rational}}\ operator+(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_rational}{Rational}}\&\ other)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ num\ =\ numerator\ *\ other.denominator\ +\ other.numerator\ *\ denominator;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ denom\ =\ denominator\ *\ other.denominator;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_rational}{Rational}}(num,\ denom);}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_rational}{Rational}}\ operator-\/(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_rational}{Rational}}\&\ other)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ num\ =\ numerator\ *\ other.denominator\ -\/\ other.numerator\ *\ denominator;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ denom\ =\ denominator\ *\ other.denominator;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_rational}{Rational}}(num,\ denom);}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_rational}{Rational}}\ operator*(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_rational}{Rational}}\&\ other)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ num\ =\ numerator\ *\ other.numerator;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ denom\ =\ denominator\ *\ other.denominator;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_rational}{Rational}}(num,\ denom);}
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_rational}{Rational}}\ operator/(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_rational}{Rational}}\&\ other)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ num\ =\ numerator\ *\ other.denominator;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ denom\ =\ denominator\ *\ other.numerator;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_rational}{Rational}}(num,\ denom);}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ Comparison\ operators}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator==(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_rational}{Rational}}\&\ other)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ numerator\ ==\ other.numerator\ \&\&\ denominator\ ==\ other.denominator;}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator!=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_rational}{Rational}}\&\ other)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !(*\textcolor{keyword}{this}\ ==\ other);}
+\DoxyCodeLine{00062\ \ \ \ \ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator<(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_rational}{Rational}}\&\ other)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ numerator\ *\ other.denominator\ <\ other.numerator\ *\ denominator;}
+\DoxyCodeLine{00066\ \ \ \ \ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator>(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_rational}{Rational}}\&\ other)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ numerator\ *\ other.denominator\ >\ other.numerator\ *\ denominator;}
+\DoxyCodeLine{00070\ \ \ \ \ \}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator<=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_rational}{Rational}}\&\ other)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !(*\textcolor{keyword}{this}\ >\ other);}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator>=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_rational}{Rational}}\&\ other)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !(*\textcolor{keyword}{this}\ <\ other);}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//\ Normalize\ the\ rational\ number}}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ normalize()\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (denominator\ <\ 0)\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ numerator\ =\ -\/numerator;}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ denominator\ =\ -\/denominator;}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ gcdVal\ =\ \mbox{\hyperlink{class_rational_a35270db1493d899a85d4891fd19af837}{gcd}}(abs(numerator),\ abs(denominator));}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ numerator\ /=\ gcdVal;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ denominator\ /=\ gcdVal;}
+\DoxyCodeLine{00089\ \ \ \ \ \}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_rational_a35270db1493d899a85d4891fd19af837}{gcd}}(\textcolor{keywordtype}{int}\ a,\ \textcolor{keywordtype}{int}\ b)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (b\ !=\ 0)\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ temp\ =\ b;}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ b\ =\ a\ \%\ b;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ a\ =\ temp;}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ a;}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_rational}{Rational}}\ \mbox{\hyperlink{class_rational_a189b1ecdec23afc9e9945b1b7c6cad92}{fromInt}}(\textcolor{keywordtype}{int}\ num)\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_rational}{Rational}}(num,\ 1);}
+\DoxyCodeLine{00113\ \ \ \ \ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_rational}{Rational}}\ \mbox{\hyperlink{class_rational_a1292a6e163e6c187cee481a8df636be6}{infinity}}()\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_rational}{Rational}}(INT\_MAX,\ 1);\ \textcolor{comment}{//\ INT\_MAX\ is\ used\ as\ a\ large\ number\ for\ infinity}}
+\DoxyCodeLine{00121\ \ \ \ \ \}}
+\DoxyCodeLine{00122\ \};}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{comment}{//\ Define\ operator<<\ for\ output}}
+\DoxyCodeLine{00125\ std::ostream\&\ operator<<(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_rational}{Rational}}\&\ r)\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ os\ <<\ r.numerator;}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordflow}{if}\ (r.denominator\ !=\ 1)\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}/"{}}\ <<\ r.denominator;}
+\DoxyCodeLine{00129\ \ \ \ \ \}}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
+\DoxyCodeLine{00131\ \}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \textcolor{comment}{//\ Define\ operator>>\ for\ input}}
+\DoxyCodeLine{00134\ std::istream\&\ operator>>(std::istream\&\ is,\ \mbox{\hyperlink{class_rational}{Rational}}\&\ r)\ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{char}\ slash;}
+\DoxyCodeLine{00136\ \ \ \ \ is\ >>\ r.numerator\ >>\ slash\ >>\ r.denominator;}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordflow}{if}\ (r.denominator\ ==\ 0)\ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Denominator\ cannot\ be\ zero"{}});}
+\DoxyCodeLine{00139\ \ \ \ \ \}}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordflow}{return}\ is;}
+\DoxyCodeLine{00141\ \}}
+
+\end{DoxyCode}

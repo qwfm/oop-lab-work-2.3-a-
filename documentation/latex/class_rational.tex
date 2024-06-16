@@ -1,0 +1,130 @@
+\doxysection{Rational Class Reference}
+\hypertarget{class_rational}{}\label{class_rational}\index{Rational@{Rational}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_rational_ae2064c57ffe74d1261638dc370e276c2}\label{class_rational_ae2064c57ffe74d1261638dc370e276c2} 
+{\bfseries Rational} (int num)
+\item 
+\Hypertarget{class_rational_a9a4c9b1cf8fa458c3be17f618f011942}\label{class_rational_a9a4c9b1cf8fa458c3be17f618f011942} 
+{\bfseries Rational} (int num, int denom)
+\item 
+\Hypertarget{class_rational_ade1228130debffa7eae0d7261f2de67d}\label{class_rational_ade1228130debffa7eae0d7261f2de67d} 
+{\bfseries Rational} (const \mbox{\hyperlink{class_rational}{Rational}} \&other)
+\item 
+\Hypertarget{class_rational_af29da8ac327abc698193204a04c80ecc}\label{class_rational_af29da8ac327abc698193204a04c80ecc} 
+int {\bfseries get\+Numerator} () const
+\item 
+\Hypertarget{class_rational_a830e059c8bb97634ddb63bb64be851b9}\label{class_rational_a830e059c8bb97634ddb63bb64be851b9} 
+int {\bfseries get\+Denominator} () const
+\item 
+\Hypertarget{class_rational_a3a42099396a11d8b2ecb92bd31a84b0d}\label{class_rational_a3a42099396a11d8b2ecb92bd31a84b0d} 
+\mbox{\hyperlink{class_rational}{Rational}} {\bfseries operator+} (const \mbox{\hyperlink{class_rational}{Rational}} \&other) const
+\item 
+\Hypertarget{class_rational_a7a884b3d93e608eaecc8034ce978e2cd}\label{class_rational_a7a884b3d93e608eaecc8034ce978e2cd} 
+\mbox{\hyperlink{class_rational}{Rational}} {\bfseries operator-\/} (const \mbox{\hyperlink{class_rational}{Rational}} \&other) const
+\item 
+\Hypertarget{class_rational_a2b70ceda2dabf6f6be68f8089dd50324}\label{class_rational_a2b70ceda2dabf6f6be68f8089dd50324} 
+\mbox{\hyperlink{class_rational}{Rational}} {\bfseries operator\texorpdfstring{$\ast$}{*}} (const \mbox{\hyperlink{class_rational}{Rational}} \&other) const
+\item 
+\Hypertarget{class_rational_ab0e2c3000d1f8bafdd410a6b7d284939}\label{class_rational_ab0e2c3000d1f8bafdd410a6b7d284939} 
+\mbox{\hyperlink{class_rational}{Rational}} {\bfseries operator/} (const \mbox{\hyperlink{class_rational}{Rational}} \&other) const
+\item 
+\Hypertarget{class_rational_a93257dbfc722e274ef343d791d942fad}\label{class_rational_a93257dbfc722e274ef343d791d942fad} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{class_rational}{Rational}} \&other) const
+\item 
+\Hypertarget{class_rational_a514ff082d144d2aa714a4648a7ba2236}\label{class_rational_a514ff082d144d2aa714a4648a7ba2236} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{class_rational}{Rational}} \&other) const
+\item 
+\Hypertarget{class_rational_a2f1ebc8967153a557be1014f0ae68c76}\label{class_rational_a2f1ebc8967153a557be1014f0ae68c76} 
+bool {\bfseries operator$<$} (const \mbox{\hyperlink{class_rational}{Rational}} \&other) const
+\item 
+\Hypertarget{class_rational_a9d02a9c625a410f70688bf37df63c1ae}\label{class_rational_a9d02a9c625a410f70688bf37df63c1ae} 
+bool {\bfseries operator$>$} (const \mbox{\hyperlink{class_rational}{Rational}} \&other) const
+\item 
+\Hypertarget{class_rational_a1cba9930b6643d5fa8fc35897ca65d3d}\label{class_rational_a1cba9930b6643d5fa8fc35897ca65d3d} 
+bool {\bfseries operator$<$=} (const \mbox{\hyperlink{class_rational}{Rational}} \&other) const
+\item 
+\Hypertarget{class_rational_a6124bf2bad4e56cfb60c60c161a51a60}\label{class_rational_a6124bf2bad4e56cfb60c60c161a51a60} 
+bool {\bfseries operator$>$=} (const \mbox{\hyperlink{class_rational}{Rational}} \&other) const
+\item 
+\Hypertarget{class_rational_a53186844f41b7113b598f6ccdc4af6c7}\label{class_rational_a53186844f41b7113b598f6ccdc4af6c7} 
+void {\bfseries normalize} ()
+\item 
+int \mbox{\hyperlink{class_rational_a35270db1493d899a85d4891fd19af837}{gcd}} (int a, int b) const
+\begin{DoxyCompactList}\small\item\em Method to compute the greatest common divisor (GCD) of two integers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_rational}{Rational}} \mbox{\hyperlink{class_rational_a189b1ecdec23afc9e9945b1b7c6cad92}{from\+Int}} (int num)
+\begin{DoxyCompactList}\small\item\em Static method to create a \doxylink{class_rational}{Rational} number from an integer. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_rational}{Rational}} \mbox{\hyperlink{class_rational_a1292a6e163e6c187cee481a8df636be6}{infinity}} ()
+\begin{DoxyCompactList}\small\item\em Static method to get a representation of infinity as a \doxylink{class_rational}{Rational} number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_rational_a6dd39550656ffb34e1185337f9b41459}\label{class_rational_a6dd39550656ffb34e1185337f9b41459} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \mbox{\hyperlink{class_rational}{Rational}} \&r)
+\item 
+\Hypertarget{class_rational_a9a35e382e959554966098e1137b0ee8c}\label{class_rational_a9a35e382e959554966098e1137b0ee8c} 
+std\+::istream \& {\bfseries operator$>$$>$} (std\+::istream \&is, \mbox{\hyperlink{class_rational}{Rational}} \&r)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_rational_a189b1ecdec23afc9e9945b1b7c6cad92}\index{Rational@{Rational}!fromInt@{fromInt}}
+\index{fromInt@{fromInt}!Rational@{Rational}}
+\doxysubsubsection{\texorpdfstring{fromInt()}{fromInt()}}
+{\footnotesize\ttfamily \label{class_rational_a189b1ecdec23afc9e9945b1b7c6cad92} 
+static \mbox{\hyperlink{class_rational}{Rational}} Rational\+::from\+Int (\begin{DoxyParamCaption}\item[{int}]{num}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Static method to create a \doxylink{class_rational}{Rational} number from an integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & Integer value to convert to a \doxylink{class_rational}{Rational}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_rational}{Rational} equivalent of the integer. 
+\end{DoxyReturn}
+\Hypertarget{class_rational_a35270db1493d899a85d4891fd19af837}\index{Rational@{Rational}!gcd@{gcd}}
+\index{gcd@{gcd}!Rational@{Rational}}
+\doxysubsubsection{\texorpdfstring{gcd()}{gcd()}}
+{\footnotesize\ttfamily \label{class_rational_a35270db1493d899a85d4891fd19af837} 
+int Rational\+::gcd (\begin{DoxyParamCaption}\item[{int}]{a}{, }\item[{int}]{b}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to compute the greatest common divisor (GCD) of two integers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First integer. \\
+\hline
+{\em b} & Second integer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GCD of integers a and b. 
+\end{DoxyReturn}
+\Hypertarget{class_rational_a1292a6e163e6c187cee481a8df636be6}\index{Rational@{Rational}!infinity@{infinity}}
+\index{infinity@{infinity}!Rational@{Rational}}
+\doxysubsubsection{\texorpdfstring{infinity()}{infinity()}}
+{\footnotesize\ttfamily \label{class_rational_a1292a6e163e6c187cee481a8df636be6} 
+static \mbox{\hyperlink{class_rational}{Rational}} Rational\+::infinity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Static method to get a representation of infinity as a \doxylink{class_rational}{Rational} number. 
+
+\begin{DoxyReturn}{Returns}
+Infinity represented as a \doxylink{class_rational}{Rational} number. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Optimal\+BST/Rational.\+h\end{DoxyCompactItemize}
