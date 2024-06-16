@@ -1,0 +1,7 @@
+﻿  test.cpp
+C:\Users\chasl\OneDrive\Desktop\OptimalBST\OptimalBST\OptimalBST.cpp(173,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'test.cpp')
+  
+C:\Users\chasl\OneDrive\Desktop\OptimalBST\GoogleUnitTests\test.cpp(57,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\chasl\OneDrive\Desktop\OptimalBST\GoogleUnitTests\test.cpp(81,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  GoogleUnitTests.vcxproj -> C:\Users\chasl\OneDrive\Desktop\OptimalBST\x64\Debug\GoogleUnitTests.exe
