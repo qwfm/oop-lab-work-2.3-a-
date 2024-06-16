@@ -15,9 +15,13 @@ After constructing each tree with 2 different methods, we can see time in which 
 ---
 
 The time difference:
+
 ![image](https://github.com/qwfm/oop-lab-work-2.3-a-/assets/146103678/4fcd4750-5ef6-4f2e-9442-e03607fcfffc)
+
 and 
+
 ![image](https://github.com/qwfm/oop-lab-work-2.3-a-/assets/146103678/5259f98f-33cb-432d-864a-93138d7d5151)
+
 From this comperison, we can see that using threads to build a tree is faster, than sequential method.
 
 ---
